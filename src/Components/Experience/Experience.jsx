@@ -8,10 +8,16 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import technians from "../../assets/tech.webp";
-
+import { motion } from "framer-motion";
 const Experience = () => {
   return (
-    <div id="Experience" className="px-4 py-10 sm:px-6 md:px-16 lg:px-24">
+    <motion.section
+      initial={{ x: 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      id="Experience"
+      className="px-4 py-10 sm:px-6 md:px-16 lg:px-24"
+    >
       <h1 className="text-2xl md:text-4xl text-white font-bold mb-8">
         Experience
       </h1>
@@ -80,7 +86,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RiMenu2Line, RiCloseLine } from "@remixicon/react";
 import ProfilePic from "../../assets/dp.png";
-
+import { motion } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -71,7 +71,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-full left-1/2 -translate-x-1/2 w-[90%] sm:w-4/5  flex flex-col items-center gap-4 bg-gray-900 rounded-xl py-4 font-semibold md:hidden transition-all duration-300 ease-in-out shadow-lg z-500">
+        <motion.ul
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="absolute top-full left-1/2 -translate-x-1/2 w-[90%] sm:w-4/5  flex flex-col items-center gap-4 bg-gray-900 rounded-xl py-4 font-semibold md:hidden transition-all duration-300 ease-in-out shadow-lg z-500"
+        >
           <li>
             <a href="#About" onClick={() => setIsOpen(false)}>
               About
@@ -102,7 +108,7 @@ const Navbar = () => {
               Resume
             </a>
           </li>
-        </ul>
+        </motion.ul>
       )}
     </nav>
   );

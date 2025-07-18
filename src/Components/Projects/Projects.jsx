@@ -1,9 +1,14 @@
 import ProjectCard from "./ProjectCard";
 import nirvanaImg from "../../assets/nirv.png";
 import spiceImg from "../../assets/spice.png";
+import { motion } from "framer-motion";
 const Projects = () => {
   return (
-    <div
+    <motion.section
+      initial={{ y: 60, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.3 }}
       className="px-4 py-10 sm:px-6 md:px-16 lg:px-24 text-white"
       id="Projects"
     >
@@ -24,7 +29,7 @@ const Projects = () => {
           image={spiceImg}
         />
       </div>
-    </div>
+    </motion.section>
   );
 };
 

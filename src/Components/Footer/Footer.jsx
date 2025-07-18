@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div
+    <section
       id="Contact"
       className="bg-[#0c0e19]/80 backdrop-blur-md text-white px-6 py-10 md:px-12 md:py-12 border-t border-white/10"
     >
@@ -54,7 +54,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

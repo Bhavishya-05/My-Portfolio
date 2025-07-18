@@ -1,17 +1,20 @@
 import AboutImg from "../../assets/about_Img.png";
 import { IoArrowForward } from "react-icons/io5";
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
-    <section
+    <motion.section
       id="About"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="text-white bg-[#0c0e19]/60 backdrop-blur-sm rounded-lg shadow-xl border border-white/10 px-6 py-10 md:px-20 md:py-16 mx-4 md:mx-20"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Side - Image */}
         <div className="flex justify-center md:justify-start">
           <img
-            className="h-52 sm:h-64 md:h-80 object-contain "
+            className="h-52 sm:h-64 md:h-80 w-40 sm:w-56 md:w-72 object-contain"
             src={AboutImg}
             alt="About Bhavishya"
           />
@@ -45,7 +48,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const SidebarSocials = () => {
   return (
-    <div className="fixed top-[40%] left-0 flex flex-col items-center gap-6 px-2 py-5 z-50 ">
+    <section className="fixed top-[40%] left-0 flex flex-col items-center gap-6 px-2 py-5 z-50 ">
       {/* Top Line */}
       <div className="w-px h-10 bg-gradient-to-b from-[#465697] to-transparent" />
 
@@ -35,7 +35,7 @@ const SidebarSocials = () => {
 
       {/* Bottom Line */}
       <div className="w-px h-10 bg-gradient-to-t from-[#465697] to-transparent" />
-    </div>
+    </section>
   );
 };
 
